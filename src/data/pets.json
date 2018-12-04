@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "Everly B",
+    "species": "dog",
+    "about": "This is Everly. She is a 12 week old Spaniel/Jack Russell/Beagle mix. Right now she weighs about 13 pounds and will probably be a medium size when grown. Her mother was around 40 pounds. Everly is one of nine in her litter. She is outgoing and playful. She already has been hiking with my daughter and did great . She will make you smile with her bubbly personality and laugh at her antics. She is ready and waiting for her forever family. HS\n\n**It is rare that we know with certainty the ages or mixes that make up our wonderful dogs, but we do our best to be as accurate as possible based upon our many years in rescue.** \n\nAdoption: $325 which covers quarantine, shots, worming, food, medical records, spaying/neutering, microchip, and an Alabama State Health Certificate.\n\nTransport, if needed : $120.00 We consider the transport to be of great importance and, as such, take particular care of the dogs during the trip from Alabama. We make every effort to arrive with healthy and minimally stressed dogs.",
+    "images": [
+      "pet-1-img-1.jpg",
+      "pet-1-img-2.jpg",
+      "pet-1-img-3.jpg"
+    ],
+    "location": "Seattle, WA"
+  },
+  {
+    "id": 2,
+    "name": "Ethan B",
+    "species": "dog",
+    "about": "This is Ethan. He is a 12 week old Husky/spaniel mix. Right now he weighs about 14 pounds but will be a large dog when grown. Ethan is a love of a boy. He’s quiet and gentle. He is definitely the most easy going of his 8 siblings. His demeanor is playful yet not rambunctious like most puppies. This little charmer will win you over. He does have a partial blue eye which makes him look a little odd but I think it’s gorgeous. HS\n\n\n**It is rare that we know with certainty the ages or mixes that make up our wonderful dogs, but we do our best to be as accurate as possible based upon our many years in rescue.**\n\nAdoption: $325 which covers quarantine, shots, worming, food, medical records, spaying/neutering, microchip, and an Alabama State Health Certificate.\n\nTransport, if needed : $120.00 We consider the transport to be of great importance and, as such, take particular care of the dogs during the trip from Alabama. We make every effort to arrive with healthy and minimally stressed dogs.\n\nWeight Scale: Small = less than 25\n\nMedium = 26-60\n\nLarge = 61-100",
+    "images": [
+      "pet-2-img-1.jpg",
+      "pet-2-img-3.jpg"
+    ],
+    "location": "Tacoma, WA"
+  },
+  {
+    "id": 3,
+    "name": "Baby Simba",
+    "species": "cat",
+    "about": "Baby Simba is a sweet 1 year old female. She came to the shelter because her owner could no longer care for her. Baby Simba weighs 6 pounds, gets along well with other cats, and she will be spayed before going to her forever home.\n\nReference Baby Simba's ID number A361601. For more information about adopting from Seminole County Animal Services contact Diane Gagliano at 407-665-5208 or DGagliano@seminolecountyfl.gov",
+    "images": [
+      "pet-3-img-1.jpg",
+      "pet-3-img-2.jpg"
+    ],
+    "location": "Bellevue, WA"
+  }
+]
