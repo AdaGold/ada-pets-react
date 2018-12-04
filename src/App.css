@@ -1,32 +1,28 @@
 .App {
-  text-align: center;
+
+}
+h1 {
+  font-size: 3.5rem;
+  font-family: Menlo;
+  font-weight: bold;
+}
+.app-header {
+  grid-area: header;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.search-bar {
+  grid-area: searchbar;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.pet-list {
+  grid-area: petlist;
+  width: 
 }
 
-.App-link {
-  color: #61dafb;
+.pet-details {
+  grid-area: petdetails;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  grid-area: footer;
 }
