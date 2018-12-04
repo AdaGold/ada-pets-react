@@ -1,0 +1,15 @@
+.search-bar {
+  margin-top: 1em;
+  background: #fff;
+  padding: 1em;
+  width: 100%;
+  border-radius: 10em;
+  transition: box-shadow 300ms ease;
+  border-radius: 6px;
+  border: 1px solid rgba(137, 149, 199, .2);
+  box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, .075) !important;
+}
+
+.elevation-3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12) !important;
+}
