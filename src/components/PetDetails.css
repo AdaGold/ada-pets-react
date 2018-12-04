@@ -3,3 +3,8 @@
   margin: auto;
   display: block;
 }
+
+.pet-details--header {
+  text-align: center;
+  color: navy;
+}
