@@ -26,3 +26,8 @@ h1 {
 .footer {
   grid-area: footer;
 }
+
+header {
+  text-align: center;
+  color: navy;
+}
