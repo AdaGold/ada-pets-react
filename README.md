@@ -53,7 +53,7 @@ When the user clicks the `details` button the app should present the user with a
 
 ### Wave 2: Removing Pets
 
-When the user clicks the `remove` button on a PetCard, that animal should be removed from the application, including if that animal is the currently selected pet.  You should ensure that pets do not return when subsequent pets are removed.  
+When the user clicks the `remove` button on a PetCard, that animal should be removed from the application, including if that animal is the currently selected pet.  
 
 ### Wave 3: Adding Pets
 
