@@ -15,7 +15,7 @@ This project is designed to exercise the following skills:
 
 ## Introduction
 
-Ada Lovelace is starting a pet rescue service advertising pets in need of rescue online.  This App should load the list of pets automatically and present a list of pets with thumbnail images.  The user should be able to select a pet and see details, add new pets and remove a pet from the App once adopted.
+Ada Lovelace is starting a pet rescue service advertising pets in need of rescue online.  This App should load the list of pets automatically and present a list of pets with thumbnail images.  The user should be able to select a pet and see details, add new pets and remove a pet from the App once adopted.  On this site users can see pets up for adoption and view them in greater detail, remove pets from the app, add new pets and filter the list.  You can see a running example [here.](https://cheezitman.github.io/ada-pets-react/)
 
 ### Setup
 
