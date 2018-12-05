@@ -22,8 +22,8 @@
   margin-left: 15px;
 }
 
-.pet-card--close-btn {
-  float: right;
+.btn {
+  margin: 5px;
 }
 
 

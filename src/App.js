@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PetList from './components/PetList';
+import PetCard from './components/PetCard'
 import PetDetails from './components/PetDetails';
 import SearchBar from './components/SearchBar';
 import NewPetForm from './components/NewPetForm';

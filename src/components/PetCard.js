@@ -13,18 +13,19 @@ const PetCard = (props) => {
     <div className="card pet-card">
 
       <section className="pet-card--header">
-      <button 
-        type="button" 
-        className="close pet-card--close-btn" 
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
+
       { speciesEmoji(species) } {id} - {name} 
         <button 
           className="btn btn-primary pet-card--select-pet-btn"
           >
             Select
+        </button>
+        <button 
+          type="button" 
+          className="btn btn-danger pet-card--close-btn" 
+          aria-label="Close"
+        >
+          Close
         </button>
       </section>
       <section className="pet-card--body">
