@@ -1,0 +1,10 @@
+.pet-details--image {
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+
+.pet-details--header {
+  text-align: center;
+  color: navy;
+}
