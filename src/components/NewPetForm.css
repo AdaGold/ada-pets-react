@@ -1,0 +1,20 @@
+.new-pet-form--label {
+  margin-right: 30px;
+  margin-left: 15px;
+  width: 50px;
+  font-weight: bold;
+}
+
+.new-pet-form--submit {
+  margin-left: 15px;
+}
+
+.new-pet-form {
+  margin: 15px;
+}
+
+.new-pet-form--about {
+  width: 400px;
+  margin: 10px;
+  height: 200px;
+}

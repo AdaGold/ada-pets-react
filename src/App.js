@@ -1,26 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PetList from './components/PetList';
+import PetCard from './components/PetCard'
+import PetDetails from './components/PetDetails';
+import SearchBar from './components/SearchBar';
+import NewPetForm from './components/NewPetForm';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+import pets from './data/pets.json';
+
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      petList: pets,
+      currentPet: undefined,
+    };
+  }
+
+
+
+
   render() {
+    const { currentPet } = this.state;
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <main className="App">
+        <header className="app-header">
+          <h1>Ada Pets</h1>
         </header>
-      </div>
+        <section className="search-bar-wrapper">
+          { /* Wave 4:  Place to add the SearchBar component */ }
+          <SearchBar />
+        </section>
+          { /* Wave 2:  Where Pet Details should appear */ }
+        <section className="pet-list-wrapper">
+          { /* Wave 1:  Where PetList should appear */ }
+        </section>
+        <section className="new-pet-form-wrapper">
+          { /* Wave 3:  Where NewPetForm should appear */ }
+        </section>
+      </main>
     );
   }
 }
