@@ -80,3 +80,4 @@ Don't even read this list until you've completed the core requirements.
 
 - Notice that each pet in the application can have multiple images, add functionality to switch between images.  
 - Add functionality to change the pet order.  
+
