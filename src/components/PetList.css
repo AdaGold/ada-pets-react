@@ -8,3 +8,8 @@
   overflow-x: scroll;
   margin-top:-70px;
 }
+
+.card-group {
+  display: flex;
+  width: 100%;
+}
