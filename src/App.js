@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       petList: pets,
       currentPet: undefined,
-      originalPets: pets,
+      fullList: pets,
     };
   }
 
@@ -38,7 +38,7 @@ class App extends Component {
 
     this.setState({
       petList,
-      originalPets: petList,
+      fullList: petList,
     });
   }
 
@@ -55,7 +55,7 @@ class App extends Component {
   }
 
   filterPets = (filterTerm) => {
-    const petList = this.state.originalPets.filter((pet) => {
+    const petList = this.state.fullList.filter((pet) => {
       const text = (pet.name + ' ' + pet.about + ' ' + pet.location + ' ' + pet.species).toUpperCase();
 
       return text.includes(filterTerm.toUpperCase());
