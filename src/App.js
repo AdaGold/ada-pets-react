@@ -37,7 +37,7 @@ class App extends Component {
           { /* Wave 4:  Place to add the SearchBar component */}
           <SearchBar />
         </section>
-        { /* Wave 2:  Where Pet Details should appear */}
+        { /* Wave 1:  Where Pet Details should appear */}
         <section className="pet-list-wrapper">
           { /* Wave 1:  Where PetList should appear */}
         </section>
