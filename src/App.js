@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PetList from './components/PetList';
-import PetCard from './components/PetCard'
 import PetDetails from './components/PetDetails';
 import SearchBar from './components/SearchBar';
 import NewPetForm from './components/NewPetForm';
@@ -9,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import { pets } from './data/pets.json';
-// const pets = importData.pets;
 
 class App extends Component {
   constructor(props) {
