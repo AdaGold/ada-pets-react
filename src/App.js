@@ -66,7 +66,7 @@ class App extends Component {
 
 
   render () {
-    const { currentPet } = this.state;
+    const { currentPet, petList } = this.state;
 
     return (
       <main className="App">
@@ -75,14 +75,21 @@ class App extends Component {
         </header>
         <section className="search-bar-wrapper">
           { /* Wave 4:  Place to add the SearchBar component */}
-          <SearchBar />
+          <SearchBar searchChangeCallback={this.filterPets} />
         </section>
         { /* Wave 2:  Where Pet Details should appear */}
+        {currentPet ? <PetDetails currentPet={currentPet} /> : ''}
         <section className="pet-list-wrapper">
           { /* Wave 1:  Where PetList should appear */}
+          <PetList
+            pets={petList}
+            selectPetCallback={this.selectPet}
+            deletePetCallback={this.deletePet}
+          />
         </section>
         <section className="new-pet-form-wrapper">
           { /* Wave 3:  Where NewPetForm should appear */}
+          <NewPetForm addPetCallback={this.addPet} />
         </section>
       </main>
     );
