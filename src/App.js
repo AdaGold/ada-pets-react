@@ -16,8 +16,8 @@ class App extends Component {
     this.state = {
       petList: pets,
       currentPet: undefined,
+      originalPets: pets,
     };
-    console.log(pets);
   }
 
 
