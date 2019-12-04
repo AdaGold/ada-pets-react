@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server --watch src/data/pets.json --port 2999",
+    "server": "json-server --watch src/data/pets.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
