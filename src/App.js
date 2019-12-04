@@ -21,6 +21,48 @@ class App extends Component {
   }
 
 
+  selectPet = (petId) => {
+    const { petList } = this.state;
+
+    const currentPet = petList.find((pet) => {
+      return pet.id === petId;
+    });
+
+    this.setState({ currentPet, });
+  }
+
+  deletePet = (petId) => {
+    const petList = this.state.petList.filter((pet) => {
+      return pet.id !== petId;
+    });
+
+    this.setState({
+      petList,
+      originalPets: petList,
+    });
+  }
+
+  addPet = (pet) => {
+
+    const { petList } = this.state;
+    const petIds = petList.map((pet) => pet.id);
+    const maxId = Math.max(...petIds);
+    pet.id = maxId + 1;
+    petList.push(pet);
+    console.log('adding', pet);
+
+    this.setState(petList);
+  }
+
+  filterPets = (filterTerm) => {
+    const petList = this.state.originalPets.filter((pet) => {
+      const text = (pet.name + ' ' + pet.about + ' ' + pet.location + ' ' + pet.species).toUpperCase();
+
+      return text.includes(filterTerm.toUpperCase());
+    });
+
+    this.setState({ petList, });
+  }
 
 
   render () {
