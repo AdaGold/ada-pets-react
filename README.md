@@ -43,7 +43,7 @@ Before you start writing code, read through what's already here and make sure yo
 
 ### Wave 1: Viewing Details
 
-When the user clicks the `details` button the app should present the user with additional details on the selected pet.  Read through the provided `propTypes` attribute of the given components, **what information does that provide**?
+When the user clicks the `select` button of a specific `PetCard` the app should present the user with additional details on the selected pet.  Read through the provided `propTypes` attribute of the given components, **what information does that provide**?
 
 **Questions:**
 - How will you track which, if any Pet is the currently selected Pet?  Which component will keep the state?
