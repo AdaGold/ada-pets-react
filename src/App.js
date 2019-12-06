@@ -15,7 +15,7 @@ class App extends Component {
     const petList = pets.map((pet) => {
       pet.currentPet = 0;
       pet.images = pet.images.map((filename) => {
-        return `/images/${filename}`;
+        return `/images/${ filename }`;
       });
       return pet;
     });
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   onSelectPet = (petId) => {
-    
+
     const selectedPet = this.state.petList.find((pet) => {
       return pet.id === petId;
     });
@@ -39,10 +39,9 @@ class App extends Component {
   }
 
   onSearchChange = (value) => {
-    console.log(value);
-    const regex = new RegExp(`${value}`.toUpperCase());
+    const regex = new RegExp(`${ value }`.toUpperCase());
     const petList = pets.filter((pet) => {
-      return regex.test(`${pet.name}${pet.about}${pet.species}`.toUpperCase());
+      return regex.test(`${ pet.name }${ pet.about }${ pet.species }`.toUpperCase());
     });
 
     this.setState({
@@ -51,7 +50,7 @@ class App extends Component {
   }
 
   addPet = (newPet) => {
-    newPet.id = pets.reduce((max = 0, currentPet) => max ? Math.max(max, currentPet.id): currentPet.id) + 1
+    newPet.id = pets.reduce((max = 0, currentPet) => max ? Math.max(max, currentPet.id) : currentPet.id) + 1
     pets.push(newPet);
     this.setState({
       petList: pets,
@@ -65,7 +64,7 @@ class App extends Component {
         deleteIndex = index;
       }
     });
-    
+
     pets.splice(deleteIndex, 1);
 
     this.setState({
@@ -73,10 +72,9 @@ class App extends Component {
     })
   }
 
-  render() {
+  render () {
     const { currentPet } = this.state;
-    console.log(this.state.petList);
-    
+
     const details = currentPet ? <PetDetails currentPet={currentPet} /> : '';
 
     return (
@@ -87,12 +85,12 @@ class App extends Component {
         <section className="search-bar">
           <SearchBar onSearchChange={this.onSearchChange} />
         </section>
-         {details}
+        {details}
         <section className="pet-list">
-          <PetList 
-            selectPetCallback={this.onSelectPet} 
+          <PetList
+            selectPetCallback={this.onSelectPet}
             deletePetCallback={this.removePet}
-            pets={this.state.petList} 
+            pets={this.state.petList}
           />
         </section>
         <section>
