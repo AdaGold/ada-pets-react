@@ -78,14 +78,17 @@ class App extends Component {
         </header>
         <section className="search-bar-wrapper">
           { /* Wave 4:  Place to add the SearchBar component */}
-          <SearchBar searchChangeCallback={this.filterPets} />
+          <SearchBar
+            searchChangeCallback={this.filterPets}
+            searchTerm={this.state.searchTerm}
+          />
         </section>
         { /* Wave 1:  Where Pet Details should appear */}
         {currentPet ? <PetDetails currentPet={currentPet} /> : ''}
         <section className="pet-list-wrapper">
           { /* Wave 1:  Where PetList should appear */}
           <PetList
-            pets={petList}
+            pets={this.filteredList()}
             selectPetCallback={this.selectPet}
             deletePetCallback={this.deletePet}
           />
