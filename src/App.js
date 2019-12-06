@@ -15,7 +15,7 @@ class App extends Component {
     const petList = pets.map((pet) => {
       pet.currentPet = 0;
       pet.images = pet.images.map((filename) => {
-        return `/images/${filename}`;
+        return `/images/${ filename }`;
       });
       return pet;
     });
@@ -23,11 +23,12 @@ class App extends Component {
     this.state = {
       petList,
       currentPet: undefined,
+      searchTerm: '',
     };
   }
 
   onSelectPet = (petId) => {
-    
+
     const selectedPet = this.state.petList.find((pet) => {
       return pet.id === petId;
     });
@@ -38,20 +39,14 @@ class App extends Component {
     }
   }
 
-  onSearchChange = (value) => {
-    console.log(value);
-    const regex = new RegExp(`${value}`.toUpperCase());
-    const petList = pets.filter((pet) => {
-      return regex.test(`${pet.name}${pet.about}${pet.species}`.toUpperCase());
-    });
-
+  onSearchChange = (searchTerm) => {
     this.setState({
-      petList,
+      searchTerm,
     });
   }
 
   addPet = (newPet) => {
-    newPet.id = pets.reduce((max = 0, currentPet) => max ? Math.max(max, currentPet.id): currentPet.id) + 1
+    newPet.id = pets.reduce((max = 0, currentPet) => max ? Math.max(max, currentPet.id) : currentPet.id) + 1
     pets.push(newPet);
     this.setState({
       petList: pets,
@@ -65,7 +60,7 @@ class App extends Component {
         deleteIndex = index;
       }
     });
-    
+
     pets.splice(deleteIndex, 1);
 
     this.setState({
@@ -73,10 +68,16 @@ class App extends Component {
     })
   }
 
-  render() {
+  filteredPetList = () => {
+    return this.state.petList.filter((pet) => {
+      const text = `${ pet.name } ${ pet.species } ${ pet.about } ${ pet.location }`.toLocaleLowerCase();
+      return text.includes(this.state.searchTerm.toLocaleLowerCase());
+    });
+  }
+
+  render () {
     const { currentPet } = this.state;
-    console.log(this.state.petList);
-    
+
     const details = currentPet ? <PetDetails currentPet={currentPet} /> : '';
 
     return (
@@ -85,14 +86,14 @@ class App extends Component {
           <h1>Ada Pets</h1>
         </header>
         <section className="search-bar">
-          <SearchBar onSearchChange={this.onSearchChange} />
+          <SearchBar onTermChangeCallback={this.onSearchChange} searchTerm={this.state.searchTerm} />
         </section>
-         {details}
+        {details}
         <section className="pet-list">
-          <PetList 
-            selectPetCallback={this.onSelectPet} 
+          <PetList
+            selectPetCallback={this.onSelectPet}
             deletePetCallback={this.removePet}
-            pets={this.state.petList} 
+            pets={this.filteredPetList()}
           />
         </section>
         <section>
