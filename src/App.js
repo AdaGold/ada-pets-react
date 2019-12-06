@@ -16,8 +16,16 @@ class App extends Component {
     this.state = {
       petList: pets,
       currentPet: undefined,
-      fullList: pets,
+      searchTerm: '',
     };
+  }
+
+  filteredList = () => {
+    return this.state.petList.filter((pet) => {
+      const text = (`${ pet.name } ${ pet.about } ${ pet.location } ${ pet.species }`).toUpperCase();
+
+      return text.includes(this.state.searchTerm.toUpperCase());
+    });
   }
 
 
