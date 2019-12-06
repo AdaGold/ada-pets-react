@@ -101,6 +101,7 @@ class App extends Component {
       <main className="App">
         <header className="app-header">
           <h1>Ada Pets</h1>
+          <p>{this.state.error ? `Error: ${ this.state.error }` : ''} </p>
         </header>
         <section className="search-bar-wrapper">
           { /* Wave 4:  Place to add the SearchBar component */}
