@@ -69,15 +69,23 @@ class App extends Component {
   };
 
   addPet = (pet) => {
-
-    const { petList } = this.state;
-    const petIds = petList.map((pet) => pet.id);
-    const maxId = Math.max(...petIds);
-    pet.id = maxId + 1;
-    petList.push(pet);
-
-    this.setState(petList);
+    console.log('pet = ', pet);
+    axios.post('http://localhost:3000/pets', pet)
+      .then((response) => {
+        // We can update the state so we don't need to make another GET request
+        const updatedData = this.state.petList;
+        updatedData.push(response.data);
+        this.setState({
+          petList: updatedData,
+          error: ''
+        });
+      })
+      .catch((error) => {
+        // Use the same idea we had in our GET request
+        this.setState({ error: error.message });
+      });
   }
+
 
   filterPets = (searchTerm) => {
     this.setState({
