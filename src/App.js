@@ -15,10 +15,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      petList: pets,
+      petList: [],
       currentPet: undefined,
       searchTerm: '',
+      error: '',
     };
+  }
+
+  componentDidMount () {
+    axios.get('http://localhost:3000/pets')
+      .then((response) => {
+        this.setState({
+          petList: response.data,
+        });
+      })
+      .catch((error) => {
+        // TODO
+      });
   }
 
   filteredList = () => {
