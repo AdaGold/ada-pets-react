@@ -57,24 +57,19 @@ class App extends Component {
     const maxId = Math.max(...petIds);
     pet.id = maxId + 1;
     petList.push(pet);
-    console.log('adding', pet);
 
     this.setState(petList);
   }
 
-  filterPets = (filterTerm) => {
-    const petList = this.state.fullList.filter((pet) => {
-      const text = (pet.name + ' ' + pet.about + ' ' + pet.location + ' ' + pet.species).toUpperCase();
-
-      return text.includes(filterTerm.toUpperCase());
+  filterPets = (searchTerm) => {
+    this.setState({
+      searchTerm,
     });
-
-    this.setState({ petList, });
   }
 
 
   render () {
-    const { currentPet, petList } = this.state;
+    const { currentPet } = this.state;
 
     return (
       <main className="App">
