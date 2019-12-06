@@ -54,15 +54,19 @@ class App extends Component {
   }
 
   deletePet = (petId) => {
-    const petList = this.state.petList.filter((pet) => {
-      return pet.id !== petId;
-    });
+    axios.delete(`http://localhost:3000/pets/${ petId }`)
+      .then((response) => {
+        const petList = this.state.petList.filter((pet) => pet.id !== petId);
 
-    this.setState({
-      petList,
-      fullList: petList,
-    });
-  }
+        this.setState({
+          petList,
+          fullList: petList
+        });
+      })
+      .catch((error) => {
+        this.setState({ error: error.message });
+      });
+  };
 
   addPet = (pet) => {
 
