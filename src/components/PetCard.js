@@ -42,9 +42,10 @@ const PetCard = ({ id, name, species, about, location, deletePetCallback, select
 
 PetCard.propTypes = {
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  about: PropTypes.string,
+
+  name: PropTypes.string.isRequired, 
+  species: PropTypes.string.isRequired, 
+  about: PropTypes.string.isRequired, 
   location: PropTypes.string,
   deletePetCallback: PropTypes.func.isRequired,
   selectPetCallback: PropTypes.func.isRequired,

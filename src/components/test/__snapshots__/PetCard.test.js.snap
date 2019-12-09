@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PetCard that it matches the existing snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="card pet-card"
+  >
+    <section
+      class="pet-card--header"
+    >
+      <button
+        aria-label="Close"
+        class="close pet-card--close-btn"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+        >
+          ×
+        </span>
+      </button>
+      ❓ 1 - Denali
+      <button
+        class="btn btn-primary pet-card--select-pet-btn"
+      >
+        Select
+      </button>
+    </section>
+    <section
+      class="pet-card--body"
+    >
+      Most empathetic dog ever
+    </section>
+    <section
+      class="pet-card--footer text-muted"
+    >
+      Seattle, WA
+    </section>
+  </div>
+</DocumentFragment>
+`;
