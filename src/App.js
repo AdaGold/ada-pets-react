@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import PetList from './components/PetList';
 import PetDetails from './components/PetDetails';
 import SearchBar from './components/SearchBar';
@@ -14,10 +15,23 @@ class App extends Component {
     super(props);
 
     this.state = {
-      petList: pets,
+      petList: [],
       currentPet: undefined,
       searchTerm: '',
+      error: '',
     };
+  }
+
+  componentDidMount () {
+    axios.get('http://localhost:3000/pets')
+      .then((response) => {
+        this.setState({
+          petList: response.data,
+        });
+      })
+      .catch((error) => {
+        // TODO
+      });
   }
 
   filteredList = () => {
@@ -40,26 +54,38 @@ class App extends Component {
   }
 
   deletePet = (petId) => {
-    const petList = this.state.petList.filter((pet) => {
-      return pet.id !== petId;
-    });
+    axios.delete(`http://localhost:3000/pets/${ petId }`)
+      .then((response) => {
+        const petList = this.state.petList.filter((pet) => pet.id !== petId);
 
-    this.setState({
-      petList,
-      fullList: petList,
-    });
-  }
+        this.setState({
+          petList,
+          fullList: petList
+        });
+      })
+      .catch((error) => {
+        this.setState({ error: error.message });
+      });
+  };
 
   addPet = (pet) => {
-
-    const { petList } = this.state;
-    const petIds = petList.map((pet) => pet.id);
-    const maxId = Math.max(...petIds);
-    pet.id = maxId + 1;
-    petList.push(pet);
-
-    this.setState(petList);
+    console.log('pet = ', pet);
+    axios.post('http://localhost:3000/pets', pet)
+      .then((response) => {
+        // We can update the state so we don't need to make another GET request
+        const updatedData = this.state.petList;
+        updatedData.push(response.data);
+        this.setState({
+          petList: updatedData,
+          error: ''
+        });
+      })
+      .catch((error) => {
+        // Use the same idea we had in our GET request
+        this.setState({ error: error.message });
+      });
   }
+
 
   filterPets = (searchTerm) => {
     this.setState({
@@ -75,6 +101,7 @@ class App extends Component {
       <main className="App">
         <header className="app-header">
           <h1>Ada Pets</h1>
+          <p>{this.state.error ? `Error: ${ this.state.error }` : ''} </p>
         </header>
         <section className="search-bar-wrapper">
           { /* Wave 4:  Place to add the SearchBar component */}

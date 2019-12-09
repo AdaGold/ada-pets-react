@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewPetForm that it matches the existing snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="new-pet-form"
+  >
+    <h3>
+      Add a Pet
+    </h3>
+    <div>
+      <label
+        class="new-pet-form--label"
+        for="name"
+      >
+        Name: 
+      </label>
+      <input
+        id="name"
+        name="name"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        class="new-pet-form--label"
+        for="species"
+      >
+        Species: 
+      </label>
+      <select
+        id="species"
+        name="species"
+      >
+        <option
+          value=""
+        />
+        <option
+          value="dog"
+        >
+          Dog
+        </option>
+        <option
+          value="cat"
+        >
+          Cat
+        </option>
+      </select>
+    </div>
+    <div>
+      <label
+        class="new-pet-form--label"
+        for="image"
+      >
+        Image: 
+      </label>
+      <input
+        id="image"
+        name="image"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        class="new-pet-form--label"
+        for="location"
+      >
+        Location: 
+      </label>
+      <input
+        id="location"
+        name="location"
+        value=""
+      />
+    </div>
+    <div>
+      <label
+        class="new-pet-form--label"
+        for="about"
+      >
+        About: 
+      </label>
+    </div>
+    <div>
+      <textarea
+        class="new-pet-form--about"
+        id="about"
+        name="about"
+      />
+    </div>
+    <input
+      class="btn btn-success new-pet-form--submit"
+      name="submit"
+      type="submit"
+      value="Add a Pet"
+    />
+  </form>
+</DocumentFragment>
+`;

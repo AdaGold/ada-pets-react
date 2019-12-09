@@ -17,7 +17,10 @@
       "name": "Ethan B",
       "species": "dog",
       "about": "This is Ethan. He is a 12 week old Husky/spaniel mix. Right now he weighs about 14 pounds but will be a large dog when grown. Ethan is a love of a boy. He’s quiet and gentle. He is definitely the most easy going of his 8 siblings. His demeanor is playful yet not rambunctious like most puppies. This little charmer will win you over. He does have a partial blue eye which makes him look a little odd but I think it’s gorgeous. HS\n\n\n**It is rare that we know with certainty the ages or mixes that make up our wonderful dogs, but we do our best to be as accurate as possible based upon our many years in rescue.**\n\nAdoption: $325 which covers quarantine, shots, worming, food, medical records, spaying/neutering, microchip, and an Alabama State Health Certificate.\n\nTransport, if needed : $120.00 We consider the transport to be of great importance and, as such, take particular care of the dogs during the trip from Alabama. We make every effort to arrive with healthy and minimally stressed dogs.\n\nWeight Scale: Small = less than 25\n\nMedium = 26-60\n\nLarge = 61-100",
-      "images": ["/images/pet-2-img-1.jpg", "/images/pet-2-img-3.jpg"],
+      "images": [
+        "/images/pet-2-img-1.jpg",
+        "/images/pet-2-img-3.jpg"
+      ],
       "location": "Tacoma, WA"
     },
     {
@@ -25,7 +28,10 @@
       "name": "Baby Simba",
       "species": "cat",
       "about": "Baby Simba is a sweet 1 year old female. She came to the shelter because her owner could no longer care for her. Baby Simba weighs 6 pounds, gets along well with other cats, and she will be spayed before going to her forever home.\n\nReference Baby Simba's ID number A361601. For more information about adopting from Seminole County Animal Services contact Diane Gagliano at 407-665-5208 or DGagliano@seminolecountyfl.gov",
-      "images": ["/images/pet-3-img-1.jpg", "/images/pet-3-img-2.jpg"],
+      "images": [
+        "/images/pet-3-img-1.jpg",
+        "/images/pet-3-img-2.jpg"
+      ],
       "location": "Bellevue, WA"
     },
     {
@@ -33,7 +39,10 @@
       "name": "Ruth",
       "species": "cat",
       "about": "“Baby Ruth! Baby Ruth!” Our older girl Ruth here may be a little older but don’t count her out! Ruth is a timid older lady that would love a new home for the rest of her days. Ruth loves attention but is slow to warming up just to make sure that you are here to stay. Her favorite spot in a home would be either on your lap or laying is the sun that shines through the windows. Ruth would like a calmer home due to being older and timid. She would make a great companion for someone who enjoys having a calmer cat that will do her own thing but gives you plenty of attention! If your home sounds like the perfect match for Ruth, come and meet her today!",
-      "images": ["/images/pet-4-img-1.jpg", "/images/pet-4-img-2.jpg"],
+      "images": [
+        "/images/pet-4-img-1.jpg",
+        "/images/pet-4-img-2.jpg"
+      ],
       "location": "Seattle, WA"
     },
     {
@@ -41,7 +50,10 @@
       "name": "Sherry",
       "species": "dog",
       "about": "Hi, my name is Sherry. I am a lab mix and I was born June 8, 2018. I was about to be sent to a shelter when my foster mom saved me. Although my foster family loves me very much, they want me to find the best home possible. I have all of my shots up to date and I am already spayed. I’m still a puppy but I’m working really hard on being potty trained. I am sweet to everyone I meet and very playful. I get along with other dogs and children very well. I love hugs and kisses and hope to find a new home soon.",
-      "images": ["/images/pet-5-img-1.jpg", "/images/pet-5-img-2.jpg"],
+      "images": [
+        "/images/pet-5-img-1.jpg",
+        "/images/pet-5-img-2.jpg"
+      ],
       "location": "Seattle, WA"
     },
     {
@@ -49,7 +61,9 @@
       "name": "Coco",
       "species": "dog",
       "about": "This girl is a bundle of energy and ready to be your next adventure buddy! She is smart attentive and very tuned in to you. We think she would make an awesome agility dog. Coco is 11 months old and 32 lbs. She is spayed and UTD on her vaccines. Coco is a German Shepherd Fiest mix. So she has beauty and brains! She plays well with other dogs and loves children of all ages. She would love a home with room to run! Date in 11/25/18 Date available 11/25/18",
-      "images": ["/images/pet-6-img-1.jpg"],
+      "images": [
+        "/images/pet-6-img-1.jpg"
+      ],
       "location": "Redmond, WA"
     },
     {
@@ -57,7 +71,10 @@
       "name": "Rex",
       "species": "cat",
       "about": "Hi guys. My name is Rex. 2 weeks ago I was living outside however these nice ladies rescued me and my brother (Tex). I'm super sad now as my brother got adopted this past weekend (even though I'm super happy for him) and I have no one to play with. I'd love an indoor forever home for the holidays especially with a feline siblings to play with. I've been neutered, had my rabies, FVRCP and I'm chipped.  My adoption fee is $65",
-      "images": ["/images/pet-7-img-1.jpg", "/images/pet-7-img-2.jpg"],
+      "images": [
+        "/images/pet-7-img-1.jpg",
+        "/images/pet-7-img-2.jpg"
+      ],
       "location": "Redmond, WA"
     }
   ]
