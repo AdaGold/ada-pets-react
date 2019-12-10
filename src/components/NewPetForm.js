@@ -30,7 +30,7 @@ class NewPetForm extends Component {
   onFormChange = (event) => {
     const field = event.target.name;
     const value = event.target.value;
-    
+
     const updatedState = {};
     updatedState[field] = value;
     this.setState(updatedState);
@@ -39,7 +39,7 @@ class NewPetForm extends Component {
   onSubmit = (event) => {
     event.preventDefault();
     const { name, species, image } = this.state;
-    
+
     if (name === '' || species === '' || image === '') return;
 
     console.log(event);
@@ -47,7 +47,7 @@ class NewPetForm extends Component {
     this.resetState();
   }
 
-  render() {
+  render () {
     return (
       <form onSubmit={this.onSubmit} name="new-pet-form" id="new-pet-form" className="new-pet-form">
         <div>

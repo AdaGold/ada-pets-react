@@ -46,7 +46,12 @@ class App extends Component {
   }
 
   addPet = (newPet) => {
-    newPet.id = pets.reduce((max = 0, currentPet) => max ? Math.max(max, currentPet.id) : currentPet.id) + 1
+    const petIds = this.state.petList.map((pet) => pet.id);
+
+    const maxId = Math.max(...petIds);
+    newPet.id = maxId + 1;
+
+    //newPet.id = pets.reduce((max = 0, currentPet) => max ? Math.max(max, currentPet.id) : currentPet.id) + 1
     pets.push(newPet);
     this.setState({
       petList: pets,

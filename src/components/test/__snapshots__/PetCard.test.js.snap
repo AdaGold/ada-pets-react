@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PetCard Snapshot test for PetCard 1`] = `
+<DocumentFragment>
+  <div
+    class="card pet-card"
+  >
+    <section
+      class="pet-card--header"
+    >
+      ❓ 1 - Herminie
+      <div>
+        <button
+          class="btn btn-primary pet-card--select-pet-btn"
+        >
+          Select
+        </button>
+        <button
+          aria-label="Close"
+          class="btn btn-danger pet-card--close-btn"
+          type="button"
+        >
+          Close
+        </button>
+      </div>
+    </section>
+    <section
+      class="pet-card--body"
+    >
+      Herminie is my lovely oxen
+    </section>
+    <section
+      class="pet-card--footer text-muted"
+    >
+      Singapore
+    </section>
+  </div>
+</DocumentFragment>
+`;
