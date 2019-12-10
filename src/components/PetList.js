@@ -5,12 +5,12 @@ import PetCard from './PetCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const PetList = (props) => {
-  const petList = props.pets.map((pet) => {
-    return <PetCard key={pet.id} 
-             deletePetCallback={props.deletePetCallback}
-             selectPetCallback={props.selectPetCallback} 
-             {...pet} />
+const PetList = ({ pets, deletePetCallback, selectPetCallback }) => {
+  const petList = pets.map((pet) => {
+    return <PetCard key={pet.id}
+      deletePetCallback={deletePetCallback}
+      selectPetCallback={selectPetCallback}
+      {...pet} />
   });
 
   return (
