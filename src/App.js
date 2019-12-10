@@ -76,7 +76,7 @@ class App extends Component {
   }
 
   render () {
-    const { currentPet } = this.state;
+    const { currentPet, searchTerm } = this.state;
 
     const details = currentPet ? <PetDetails currentPet={currentPet} /> : '';
 
@@ -86,7 +86,7 @@ class App extends Component {
           <h1>Ada Pets</h1>
         </header>
         <section className="search-bar">
-          <SearchBar onTermChangeCallback={this.onSearchChange} searchTerm={this.state.searchTerm} />
+          <SearchBar onTermChangeCallback={this.onSearchChange} searchTerm={searchTerm} />
         </section>
         {details}
         <section className="pet-list">
