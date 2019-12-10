@@ -12,21 +12,23 @@ const PetCard = ({ id, name, species, about, location, deletePetCallback, select
     <div className="card pet-card">
 
       <section className="pet-card--header">
-        <button
-          onClick={() => deletePetCallback(id)}
-          type="button"
-          className="close pet-card--close-btn"
-          aria-label="Close"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
         {speciesEmoji(species)} {id} - {name}
-        <button
-          onClick={() => { selectPetCallback(id) }}
-          className="btn btn-primary pet-card--select-pet-btn"
-        >
-          Select
+        <div>
+          <button
+            onClick={() => { selectPetCallback(id) }}
+            className="btn btn-primary pet-card--select-pet-btn"
+          >
+            Select
         </button>
+          <button
+            type="button"
+            className="btn btn-danger pet-card--close-btn"
+            aria-label="Close"
+            onClick={() => { deletePetCallback(id) }}
+          >
+            Close
+        </button>
+        </div>
       </section>
       <section className="pet-card--body">
         {about.length > 128 ? `${ about.substring(0, 128) }...` : about}
