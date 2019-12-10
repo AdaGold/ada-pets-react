@@ -7,30 +7,29 @@ import './PetCard.css';
 import speciesEmoji from '../speciesEmoji';
 
 
-const PetCard = (props) => {
-  const { id, name, species, about, location } = props;
+const PetCard = ({ id, name, species, about, location, deletePetCallback, selectPetCallback }) => {
   return (
     <div className="card pet-card">
 
       <section className="pet-card--header">
-      <button 
-        onClick={() => props.deletePetCallback(props.id)}
-        type="button" 
-        className="close pet-card--close-btn" 
-        aria-label="Close"
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-      { speciesEmoji(species) } {id} - {name} 
-        <button 
-          onClick={() => {props.selectPetCallback(props.id)}} 
+        <button
+          onClick={() => deletePetCallback(id)}
+          type="button"
+          className="close pet-card--close-btn"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {speciesEmoji(species)} {id} - {name}
+        <button
+          onClick={() => { selectPetCallback(id) }}
           className="btn btn-primary pet-card--select-pet-btn"
-          >
-            Select
+        >
+          Select
         </button>
       </section>
       <section className="pet-card--body">
-        { about.length > 128 ? `${about.substring(0, 128)}...` : about}
+        {about.length > 128 ? `${ about.substring(0, 128) }...` : about}
       </section>
       <section className="pet-card--footer text-muted">
         {location}
@@ -38,15 +37,15 @@ const PetCard = (props) => {
     </div>
   );
 };
-    
+
 PetCard.propTypes = {
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired, 
-  species: PropTypes.string.isRequired, 
-  about: PropTypes.string, 
+  name: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired,
+  about: PropTypes.string,
   location: PropTypes.string,
   deletePetCallback: PropTypes.func.isRequired,
   selectPetCallback: PropTypes.func.isRequired,
 }
-    
+
 export default PetCard;
