@@ -2,7 +2,7 @@
 
 ## At a Glance
 
-- Individual, [stage 1](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md#stage-1) project
+- Individual, [stage 1](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-1) project
 - To be completed in class, **DATE**. No pull request is required.
 
 ## Learning Goals
